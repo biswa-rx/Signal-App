@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Signal</string>
+    <string name="status_connecting">Data Transfer</string>
+</resources>

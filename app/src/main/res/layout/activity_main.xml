@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/le_arr"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="36dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ri_arr"
+        app:srcCompat="@drawable/le_arr" />
+
+    <ImageView
+        android:id="@+id/ri_arr"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/le_arr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/le_arr"
+        app:srcCompat="@drawable/ri_arr" />
+
+    <ImageView
+        android:id="@+id/up_arr"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/do_arr"
+        app:layout_constraintEnd_toEndOf="@+id/do_arr"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/do_arr"
+        app:layout_constraintTop_toBottomOf="@+id/status"
+        app:layout_constraintVertical_bias="0.555"
+        app:srcCompat="@drawable/up_arr" />
+
+    <ImageView
+        android:id="@+id/do_arr"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="36dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/do_arr" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center"
+        android:text="@string/status_connecting"
+        android:textColor="#1FAE00"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <ImageView
+        android:id="@+id/ar_antiClock"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ar_Clock"
+        app:layout_constraintEnd_toEndOf="@+id/le_arr"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/le_arr"
+        app:layout_constraintTop_toTopOf="@+id/ar_Clock"
+        app:srcCompat="@drawable/ar_anticlock" />
+
+    <ImageView
+        android:id="@+id/ar_Clock"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/up_arr"
+        app:layout_constraintEnd_toEndOf="@+id/ri_arr"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ri_arr"
+        app:layout_constraintTop_toTopOf="@+id/up_arr"
+        app:srcCompat="@drawable/ar_clock" />
+
+    <TextView
+        android:id="@+id/online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="4dp"
+        android:text="ONLINE"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/carView"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:text="\n  Incoming\n  Activity\n  Status"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ar_antiClock"
+        app:layout_constraintStart_toEndOf="@+id/up_arr" />
+
+    <TextView
+        android:id="@+id/tv_lt"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:background="#FFEB3B"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/carView"
+        app:layout_constraintTop_toTopOf="@+id/carView" />
+
+    <TextView
+        android:id="@+id/tv_ld"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFEB3B"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/carView"
+        app:layout_constraintEnd_toStartOf="@+id/carView" />
+
+    <TextView
+        android:id="@+id/tv_rt"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:background="#FFEB3B"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/carView"
+        app:layout_constraintTop_toTopOf="@+id/carView" />
+
+    <TextView
+        android:id="@+id/tv_rd"
+        android:layout_width="10dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFEB3B"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/carView"
+        app:layout_constraintStart_toEndOf="@+id/carView" />
+
+    <ImageView
+        android:id="@+id/mode_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/carView"
+        app:layout_constraintEnd_toEndOf="@+id/carView"
+        app:layout_constraintStart_toStartOf="@+id/carView"
+        app:srcCompat="@drawable/forword" />
+
+    <TextView
+        android:id="@+id/bt_Voltage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:paddingHorizontal="3dp"
+        android:text="Voltage"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/status"
+        app:layout_constraintStart_toEndOf="@+id/status"
+        app:layout_constraintTop_toTopOf="@+id/status"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_ping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:paddingHorizontal="3dp"
+        android:text="Ping"
+        android:textColor="#FFE600"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/online"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/online"
+        app:layout_constraintTop_toBottomOf="@+id/online" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
